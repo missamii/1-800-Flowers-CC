@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Hello, World!</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3>Menu Sidebar</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+          <p>Lorem ipsum</p>
+          <li class="active">
+
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="#">Home 1</a>
+              </li>
+              <li>
+                <a href="#">Home 2</a>
+              </li>
+              <li>
+                <a href="#">Home 3</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Link</a>
+          </li>
+          <li>
+            <a href="#">Link</a>
+          </li>
+        </ul>
+
+      </nav>
+
+      <!-- Page Content Holder -->
+      <div id="content">
+
+        <div class="card">
+          <div class="card-body">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+              <i class="glyphicon glyphicon-align-left"></i>
+              <span>Toggle Sidebar</span>
+            </button>
+          </div>
+        </div>
+
+        <h1>Hello, world!</h1>
+        <p>
+          <div class="col">
+            <div class="form-group" id="form" data-parsley-validate="">
+              <label for="lastName">First Name</label>
+              <input type="text" data-parsley-maxlength="42" class="form-control" id="firstname" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+
+              <label for="lastName">Phone Number</label>
+              <input type="text" class="form-control" id="phone" placeholder="" value="">
+
+              <label for="lastName">E-Mail Address</label>
+              <input type="text" data-parsley-minlength="10" class="form-control" id="mail" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+
+              <label for="lastName">Subject</label>
+              <input type="text" class="form-control" id="subject" placeholder="" value="">
+
+              <label for="exampleFormControlTextarea1">Your Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-info btn-lg btn-block" value="validate">Send</button>
+
+          </div>
+        </p>
+
+        <div class="line"></div>
+
+        <h2>Footer Info</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <div class="line"></div>
+
+      </div>
+      <!-- jQuery CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- Bootstrap Js CDN -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- parsely validate form -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
+      <!-- My Script -->
+      <script src="main.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+          });
+        });
+      </script>
+    </body>
+  </html>
